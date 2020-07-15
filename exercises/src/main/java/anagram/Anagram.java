@@ -1,18 +1,34 @@
 package anagram;
 
-class Anagram {
-    void detector(String word) {
-        String[] letters = word.split("");
-        int count = 0;
-        for (int i = 0; i < letters.length; i++) {
-            if (word.contains(letters[i])) {
-                count++;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Anagram {
+
+    private String word;
+    private String sortedWord;
+
+    public Anagram(String word) {
+        sortedWord = sort(word);
+        this.word = word;
+    }
+
+    public List<String> match(List<String> listOfWords) {
+
+        List<String> anagramList = new ArrayList<>();
+
+        for (String wordToCheck : listOfWords) {
+            if (sortedWord.equals(sort(wordToCheck)) && !word.toLowerCase().equals(wordToCheck.toLowerCase())) {
+                anagramList.add(wordToCheck);
             }
         }
-        if (count == letters.length) {
-            System.out.println("To jest anagram.");
-        } else {
-            System.out.println("To nie jest anagram.");
-        }
+        return anagramList;
+    }
+
+    private String sort(String word) {
+        char[] letters = word.toLowerCase().toCharArray();
+        Arrays.sort(letters);
+        return new String(letters);
     }
 }
