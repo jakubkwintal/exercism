@@ -7,7 +7,7 @@ class DiamondPrinter {
 
     List<String> printToList(char a) {
 
-        List<Character> alphabet = new ArrayList<>(); // lista z algabetem
+        List<Character> alphabet = new ArrayList<>(); // lista z alfabetem
         List<String> diamond = new ArrayList<>(); // finalna lista z poszczególnymi wierszami diamentu
 
         for (char c = 'A'; c <= 'Z'; c++) { // wypełnienie listy alphabet literami
