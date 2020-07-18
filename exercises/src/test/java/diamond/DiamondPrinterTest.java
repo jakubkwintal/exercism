@@ -6,7 +6,7 @@ import org.junit.Ignore;
 import org.junit.Before;
 import org.junit.Test;
 
-public class DiamondTest {
+public class DiamondPrinterTest {
 
     private DiamondPrinter diamondPrinter;
 
