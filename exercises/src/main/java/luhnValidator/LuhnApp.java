@@ -1,15 +1,16 @@
 package luhnValidator;
 
-class LuhnValidator {
+class LuhnApp {
 
-    boolean isValid(String candidate) {
+    public static void main(String[] args) {
 
-        String number = candidate.replaceAll(" ", "");
 
-        String regex = "\\d+\\d+";
+        String number = "055 444 285".replaceAll(" ", "");
+
+        String regex = "\\d+\\d";
 
         if (!number.matches(regex)) {
-            return false;
+            System.out.println("Zawiera nie tylko cyfry!");;
         }
 
         int sum = 0;
@@ -37,8 +38,9 @@ class LuhnValidator {
         }
 
         if (number.matches(regex) && sum % 10 == 0) {
-            return true;
+            System.out.println("No i elegancko!");;
         } else
-            return false;
+            System.out.println("Sorki, wrong number :P");;
+
     }
 }

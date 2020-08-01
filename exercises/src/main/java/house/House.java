@@ -2,7 +2,8 @@ package house;
 
 public class House {
 
-    static String[] firstPartOfLine = {"that lay in",
+    String[] firstPartOfLine = {
+            "that lay in",
             "that ate",
             "that killed",
             "that worried",
@@ -14,7 +15,8 @@ public class House {
             "that kept",
             "that belonged to"};
 
-    static String[] secondPartOfLine = {"the house that Jack built.",
+    String[] secondPartOfLine = {
+            "the house that Jack built.",
             "the malt",
             "the rat",
             "the cat",
@@ -27,7 +29,7 @@ public class House {
             "the farmer sowing his corn",
             "the horse and the hound and the horn"};
 
-    public static String verse(int verseNumber) {
+    public String verse(int verseNumber) {
 
         StringBuilder oneVerse = new StringBuilder("This is " + secondPartOfLine[verseNumber - 1]);
 
